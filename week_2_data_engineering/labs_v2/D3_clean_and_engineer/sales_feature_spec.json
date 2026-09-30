@@ -1,0 +1,29 @@
+{
+  "features": [
+    "city",
+    "channel",
+    "customer_tier",
+    "quantity",
+    "unit_price",
+    "discount_pct",
+    "revenue",
+    "ship_delay_days",
+    "order_month",
+    "order_dow",
+    "discount_missing",
+    "gross",
+    "is_bulk",
+    "is_deep_discount"
+  ],
+  "target": "returned",
+  "excluded": {
+    "order_id": "identifier",
+    "order_date": "raw date",
+    "ship_date": "raw date",
+    "order_dt": "parsed date",
+    "ship_dt": "parsed date",
+    "refund_amount": "target leakage",
+    "commission_paid": "target leakage"
+  },
+  "leak_column": "refund_amount"
+}
